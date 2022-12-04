@@ -1,8 +1,8 @@
 package com.tural.pc;
 
+import com.tural.pc.entities.VideoCard;
 import com.tural.pc.service.VideocardCollector;
 import com.tural.pc.service.VideocardCollectorServiceImpl;
-
 
 
 public class App {
@@ -14,7 +14,8 @@ public class App {
 
   public static void main(String[] args) {
     VideocardCollector videocardCollector = new VideocardCollectorServiceImpl();
-    System.out.println((videocardCollector.getCardsFromTapAzSite(URL)));
-
+    for (VideoCard card : videocardCollector.getCardsFromTapAzSite(URL)) {
+      System.out.println(card);
+    }
   }
 }
