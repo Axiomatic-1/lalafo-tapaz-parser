@@ -23,6 +23,8 @@ VideoCard(name=  "Asus TUF Gaming GTX 1650 4GB GDDR6", price=440, curr=AZN, href
 VideoCard(name=  "GeForce GTX 1050 TI", price=210, curr=AZN, href=ru.tap.az/elanlar/elektronika/komputer-avadanliqi/35963292)
 VideoCard(name=  "Gigabyte Aorus Radeon rx570 4gb", price=200, curr=AZN, href=ru.tap.az/elanlar/elektronika/komputer-avadanliqi/35959080)
 VideoCard(name=  "GT 1030 Nvidia", price=99, curr=AZN, href=ru.tap.az/elanlar/elektronika/komputer-avadanliqi/35957180)
+}
+{
 Best prices: VideoCard(name="Radeon rx 6600 xt 8GB" video , price=425, curr=AZN, href=ru.tap.az/elanlar/elektronika/komputer-avadanliqi/35860632)
 Best prices: VideoCard(name=  "Zotac GTX 1660", price=290, curr=AZN, href=ru.tap.az/elanlar/elektronika/komputer-avadanliqi/35917230)
 Best prices: VideoCard(name="Radeon RX 6600 8 gb" ekran ı, price=350, curr=AZN, href=ru.tap.az/elanlar/elektronika/komputer-avadanliqi/35860890)
