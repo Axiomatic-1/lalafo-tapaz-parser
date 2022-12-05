@@ -54,11 +54,16 @@ public class VideocardCollectorServiceImpl implements VideocardCollector {
     //setting each card his href by order (i know, it's terrible)
     if (hrefs.size() - 1 == videoCards.size()) {
       int counterForCardAndHrefList = 0;
+      //last ref in list is reference for next page
       for (String href : hrefs.subList(0, hrefs.size() - 1)) {
         videoCards.get(counterForCardAndHrefList).setHref("ru.tap.az" + href);
         if (counterForCardAndHrefList != videoCards.size() - 1) {
           counterForCardAndHrefList++;
         }
+      }
+      if (SchedulerService.hrefCounter > 0) {
+        SchedulerService.URL = "https://ru.tap.az" + hrefs.get(hrefs.size() - 1);
+        SchedulerService.hrefCounter--;
       }
     }
     return videoCards;
