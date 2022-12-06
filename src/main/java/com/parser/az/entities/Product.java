@@ -2,17 +2,17 @@ package com.parser.az.entities;
 
 import java.util.Objects;
 
-public class VideoCard {
+public class Product {
 
   private String name;
   private String price;
   private String curr;
   private String href;
 
-  public VideoCard() {
+  public Product() {
   }
 
-  public VideoCard(String name, String price, String curr, String href) {
+  public Product(String name, String price, String curr, String href) {
     this.name = name;
     this.price = price;
     this.curr = curr;
@@ -59,13 +59,13 @@ public class VideoCard {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    VideoCard videoCard = (VideoCard) o;
-    return Objects.equals(name, videoCard.name) && Objects.equals(href, videoCard.href);
+    Product product = (Product) o;
+    return Objects.equals(name, product.name) && Objects.equals(href, product.href);
   }
 
   @Override
   public String toString() {
-    return "VideoCard{" +
+    return "Product{" +
         "name='" + name + '\'' +
         ", price='" + price + '\'' +
         ", curr='" + curr + '\'' +
