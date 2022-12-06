@@ -10,6 +10,8 @@ import java.util.Timer;
 
 public class App {
     public static void main(String[] args) throws IOException {
+        System.out.println("For beginning write what you want to search here is 3 options:" +
+                " \n cpu \n videocard \n motherboard");
         Timer time = new Timer(); // Instantiate Timer Object
         SchedulerService st = new SchedulerService(); // Instantiate SheduledTask class
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));

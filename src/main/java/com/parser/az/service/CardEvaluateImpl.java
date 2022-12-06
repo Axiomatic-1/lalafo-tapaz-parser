@@ -40,32 +40,33 @@ public class CardEvaluateImpl implements CardEvaluate {
             initProcessors();
         }
         if (SchedulerService.productType.equalsIgnoreCase(ProductType.MOTHERBOARD.name())) {
-            //TODO init for motherboards
-            throw new RuntimeException("Motherboard search not implemented yet");
+            initMotherboards();
         }
     }
 
     private static void initProcessors() {
         if (avgPriceForProduct == null) {
             avgPriceForProduct = new HashMap<>();
-            avgPriceForProduct.put("12100 ", 350);
+            avgPriceForProduct.put("12100 ", 400);
             avgPriceForProduct.put("12100f", 400);
-            avgPriceForProduct.put("11400", 351);
-            avgPriceForProduct.put("11600", 351);
-            avgPriceForProduct.put("11100 ", 400);
-            avgPriceForProduct.put("11100f", 400);
-            avgPriceForProduct.put("10100", 400);
-            avgPriceForProduct.put("10600", 400);
-            avgPriceForProduct.put("9400f", 250);
-            avgPriceForProduct.put("9400 ", 251);
+            avgPriceForProduct.put("11400", 371);
+            avgPriceForProduct.put("11600", 371);
+            avgPriceForProduct.put("11100 ", 350);
+            avgPriceForProduct.put("11100f", 350);
+            avgPriceForProduct.put("10100", 280);
+            avgPriceForProduct.put("10600", 350);
+            avgPriceForProduct.put("9400f", 230);
+            avgPriceForProduct.put("9400 ", 231);
             avgPriceForProduct.put("9100 ", 251);
 
             avgPriceForProduct.put("5700", 400);
             avgPriceForProduct.put("5600", 400);
             avgPriceForProduct.put("3700", 400);
-            avgPriceForProduct.put("3600", 400);
-            avgPriceForProduct.put("2700", 400);
-            avgPriceForProduct.put("2600", 400);
+            avgPriceForProduct.put("3600", 290);
+            avgPriceForProduct.put("4100", 201);
+            avgPriceForProduct.put("3300", 250);
+            avgPriceForProduct.put("2700", 300);
+            avgPriceForProduct.put("2600", 250);
         }
     }
 
@@ -98,6 +99,31 @@ public class CardEvaluateImpl implements CardEvaluate {
             avgPriceForProduct.put("3080", 1000);
             avgPriceForProduct.put("3080ti", 1000);
             avgPriceForProduct.put("3080 ti", 1000);
+        }
+    }
+
+    private static void initMotherboards() {
+        if (avgPriceForProduct == null) {
+            //amd am4
+            avgPriceForProduct = new HashMap<>();
+            avgPriceForProduct.put("570", 230);
+            avgPriceForProduct.put("520", 180);
+            avgPriceForProduct.put("510", 180);
+            avgPriceForProduct.put("450", 180);
+            avgPriceForProduct.put("410", 160);
+            avgPriceForProduct.put("320", 150);
+            //amd am5
+            avgPriceForProduct = new HashMap<>();
+            avgPriceForProduct.put("650", 280);
+            //intel lga 1200
+            avgPriceForProduct.put("590", 250);
+            avgPriceForProduct.put("560", 200);
+            avgPriceForProduct.put("510", 200);
+            avgPriceForProduct.put("490", 200);
+            //intel lga 1700
+            avgPriceForProduct.put("690", 270);
+            avgPriceForProduct.put("660", 230);
+            avgPriceForProduct.put("610", 200);
         }
     }
 }
