@@ -1,6 +1,6 @@
-package com.tural.pc.service;
+package com.parser.az.service;
 
-import com.tural.pc.entities.VideoCard;
+import com.parser.az.entities.VideoCard;
 import java.util.List;
 
 public interface VideocardCollector {

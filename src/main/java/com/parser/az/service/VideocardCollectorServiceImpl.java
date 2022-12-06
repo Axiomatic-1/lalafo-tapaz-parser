@@ -1,7 +1,7 @@
-package com.tural.pc.service;
+package com.parser.az.service;
 
-import com.tural.pc.entities.VideoCard;
-import com.tural.pc.exceptions.UnexpectedExceptionWhileConnecting;
+import com.parser.az.entities.VideoCard;
+import com.parser.az.exceptions.UnexpectedExceptionWhileConnecting;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
@@ -62,7 +62,7 @@ public class VideocardCollectorServiceImpl implements VideocardCollector {
         }
       }
       if (SchedulerService.hrefCounter > 0) {
-        SchedulerService.URL = "https://ru.tap.az" + hrefs.get(hrefs.size() - 1);
+        SchedulerService.urlTapAz = "https://ru.tap.az" + hrefs.get(hrefs.size() - 1);
         SchedulerService.hrefCounter--;
       }
     }

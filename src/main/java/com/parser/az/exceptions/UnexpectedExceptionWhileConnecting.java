@@ -1,4 +1,4 @@
-package com.tural.pc.exceptions;
+package com.parser.az.exceptions;
 
 public class UnexpectedExceptionWhileConnecting extends RuntimeException {
 
