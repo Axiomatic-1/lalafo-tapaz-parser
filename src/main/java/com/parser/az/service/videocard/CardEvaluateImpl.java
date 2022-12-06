@@ -2,6 +2,7 @@ package com.parser.az.service.videocard;
 
 import com.parser.az.entities.VideoCard;
 
+import com.parser.az.service.videocard.interfaces.CardEvaluate;
 import java.util.*;
 
 public class CardEvaluateImpl implements CardEvaluate {

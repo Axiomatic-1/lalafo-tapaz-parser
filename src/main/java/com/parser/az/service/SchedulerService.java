@@ -2,9 +2,9 @@ package com.parser.az.service;
 
 import com.parser.az.constant.UrlHolder;
 import com.parser.az.entities.VideoCard;
-import com.parser.az.service.videocard.CardEvaluate;
+import com.parser.az.service.videocard.interfaces.CardEvaluate;
 import com.parser.az.service.videocard.CardEvaluateImpl;
-import com.parser.az.service.videocard.VideocardCollector;
+import com.parser.az.service.videocard.interfaces.VideocardCollector;
 import com.parser.az.service.videocard.VideocardCollectorServiceImpl;
 import java.util.List;
 import java.util.Set;
