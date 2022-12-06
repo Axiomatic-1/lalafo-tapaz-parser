@@ -1,4 +1,4 @@
-package com.parser.az.service;
+package com.parser.az.service.videocard;
 
 import com.parser.az.entities.VideoCard;
 

@@ -1,7 +1,8 @@
-package com.parser.az.service;
+package com.parser.az.service.videocard;
 
 import com.parser.az.entities.VideoCard;
 import com.parser.az.exceptions.UnexpectedExceptionWhileConnecting;
+import com.parser.az.service.SchedulerService;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
