@@ -13,7 +13,7 @@ import java.util.Set;
 public class CardEvaluateImpl implements CardEvaluate {
     private static final Set<Product> allCards = new HashSet<>();
     private static HashMap<String, Integer> avgPriceForProduct;
-    private final Set<Product> bestPrices = new HashSet<>();
+    public static final Set<Product> bestPrices = new HashSet<>();
 
     @Override
     public Set<Product> evaluateBestOffers(List<Product> products) {

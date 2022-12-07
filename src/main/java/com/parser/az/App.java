@@ -16,6 +16,6 @@ public class App {
         SchedulerService st = new SchedulerService(); // Instantiate SheduledTask class
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
         SchedulerService.productType = reader.readLine();
-        time.schedule(st, 0, 10000);
+        time.schedule(st, 0, 2000);
     }
 }

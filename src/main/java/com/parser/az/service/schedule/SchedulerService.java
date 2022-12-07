@@ -6,7 +6,9 @@ import com.parser.az.entities.ProductType;
 import com.parser.az.service.CardEvaluateImpl;
 import com.parser.az.service.ProductCollectorServiceImpl;
 import com.parser.az.service.interfaces.CardEvaluate;
+import com.parser.az.service.interfaces.ExcelManager;
 import com.parser.az.service.interfaces.ProductCollector;
+import com.parser.az.service.output.ExcelManagerImpl;
 
 import java.util.List;
 import java.util.Set;
@@ -45,6 +47,8 @@ public class SchedulerService extends TimerTask {
         if (hrefCounter == 0) {
             startPageSearch = cachedUrl;
         }
+        ExcelManager manager = new ExcelManagerImpl();
+        manager.writeExcelWithBestOffers(CardEvaluateImpl.bestPrices, "");
         ProductCollector productCollector = new ProductCollectorServiceImpl();
         CardEvaluate cardEvaluate = new CardEvaluateImpl();
         List<Product> cardsFromTapAzSite = productCollector.getProductFromTapAzSite(startPageSearch);
