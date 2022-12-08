@@ -49,7 +49,7 @@ public class ProductCollectorServiceImpl implements ProductCollector {
                     .distinct()
                     .collect(Collectors.toUnmodifiableList());
         }
-        //setting each card his href by order (i know, it's terrible)
+        //setting each card his url(href) by order (i know, it's terrible)
         if (hrefs.size() - 1 == products.size()) {
             int counterForCardAndHrefList = 0;
             //last ref in list is reference for next page
@@ -59,6 +59,7 @@ public class ProductCollectorServiceImpl implements ProductCollector {
                     counterForCardAndHrefList++;
                 }
             }
+            //marching to next page till depth is not 0
             if (SchedulerService.hrefCounter > 0) {
                 SchedulerService.startPageSearch = "https://ru.tap.az" + hrefs.get(hrefs.size() - 1);
                 SchedulerService.hrefCounter--;

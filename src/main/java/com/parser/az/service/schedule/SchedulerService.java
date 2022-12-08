@@ -20,12 +20,13 @@ public class SchedulerService extends TimerTask {
 
     public static String startPageSearch;
     public static String productType;
-    public static int hrefCounter = 5;
+    //provides depth of searching, not recommended more than 8
+    public static int hrefCounter = 7;
     private static String cachedUrl;
     private final Logger logger = Logger.getLogger(SchedulerService.class.getName());
 
     private static void initStartUrl() {
-        if (hrefCounter == 5) {
+        if (hrefCounter == 7) {
             if (productType.equalsIgnoreCase(ProductType.VIDEOCARD.name())) {
                 startPageSearch = UrlHolder.VIDEOCARD_START_PAGE;
                 cachedUrl = UrlHolder.VIDEOCARD_START_PAGE;
