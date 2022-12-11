@@ -54,15 +54,15 @@ public class ProductCollectorServiceImpl implements ProductCollector {
             int counterForCardAndHrefList = 0;
             //last ref in list is reference for next page
             for (String href : hrefs.subList(0, hrefs.size() - 1)) {
-                products.get(counterForCardAndHrefList).setHref("ru.tap.az" + href);
+                products.get(counterForCardAndHrefList).setHref("https://ru.tap.az" + href);
                 if (counterForCardAndHrefList != products.size() - 1) {
                     counterForCardAndHrefList++;
                 }
             }
             //marching to next page till depth is not 0
-            if (SchedulerService.hrefCounter > 0) {
-                SchedulerService.startPageSearch = "https://ru.tap.az" + hrefs.get(hrefs.size() - 1);
-                SchedulerService.hrefCounter--;
+            if (SchedulerService.hrefCounter_Tapaz > 0) {
+                SchedulerService.startPageSearch_Tapaz = "https://ru.tap.az" + hrefs.get(hrefs.size() - 1);
+                SchedulerService.hrefCounter_Tapaz--;
             }
         }
         return products;
