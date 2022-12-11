@@ -64,12 +64,12 @@ public class LalafoCollectorServiceImpl implements LalafoCollectorService {
                 String json = response.getContentAsString();
                 Response products = mapper.readValue(json, Response.class);
                 resultList.addAll(mapLalafoItemsToProduct(products.getItems()));
-                //if we have url to next page we set it to startPageSearch_Lalafo
+                //if we have url to next page we set it to startPageSearchLalafo
                 //if we have not, we set first search page and then only refresh it
                 if (products.get_links().getNext() != null) {
                     SchedulerService.startPageSearch_Lalafo =
                             UrlHolder.LALAFO_START_PREFIX_GPU_URL + products.get_links().getNext().getHref();
-                    SchedulerService.hrefCounter_Lalafo++;
+                    SchedulerService.hrefCounterLalafo++;
                     System.out.println(SchedulerService.startPageSearch_Lalafo);
                 } else {
                     SchedulerService.startPageSearch_Lalafo =

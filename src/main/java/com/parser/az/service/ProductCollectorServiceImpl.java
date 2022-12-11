@@ -60,9 +60,9 @@ public class ProductCollectorServiceImpl implements ProductCollector {
                 }
             }
             //marching to next page till depth is not 0
-            if (SchedulerService.hrefCounter_Tapaz > 0) {
+            if (SchedulerService.hrefCounterTapaz > 0) {
                 SchedulerService.startPageSearch_Tapaz = "https://ru.tap.az" + hrefs.get(hrefs.size() - 1);
-                SchedulerService.hrefCounter_Tapaz--;
+                SchedulerService.hrefCounterTapaz--;
             }
         }
         return products;

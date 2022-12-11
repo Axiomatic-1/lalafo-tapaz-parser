@@ -24,28 +24,27 @@ public class SchedulerService extends TimerTask {
     public static String startPageSearch_Lalafo;
     public static String productType;
     //provides depth of searching, not recommended more than 8
-    public static int hrefCounter_Tapaz = 7;
-    public static int hrefCounter_Lalafo = 0;
-    private static String cachedUrl_TapAz;
-    private static String cachedUrl_Lalafo;
+    public static int hrefCounterTapaz = 7;
+    public static int hrefCounterLalafo = 0;
+    private static String cachedUrlTapAz;
     private final Logger logger = Logger.getLogger(SchedulerService.class.getName());
 
     private static void initStartUrl() {
-        if (hrefCounter_Tapaz == 7) {
+        if (hrefCounterTapaz == 7) {
             if (productType.equalsIgnoreCase(ProductType.VIDEOCARD.name())) {
                 startPageSearch_Tapaz = UrlHolder.VIDEOCARD_START_PAGE;
-                cachedUrl_TapAz = UrlHolder.VIDEOCARD_START_PAGE;
+                cachedUrlTapAz = UrlHolder.VIDEOCARD_START_PAGE;
             }
             if (productType.equalsIgnoreCase(ProductType.CPU.name())) {
                 startPageSearch_Tapaz = UrlHolder.PROCESSOR_START_PAGE;
-                cachedUrl_TapAz = UrlHolder.PROCESSOR_START_PAGE;
+                cachedUrlTapAz = UrlHolder.PROCESSOR_START_PAGE;
             }
             if (productType.equalsIgnoreCase(ProductType.MOTHERBOARD.name())) {
                 startPageSearch_Tapaz = UrlHolder.MOTHERBOARD_START_PAGE;
-                cachedUrl_TapAz = UrlHolder.MOTHERBOARD_START_PAGE;
+                cachedUrlTapAz = UrlHolder.MOTHERBOARD_START_PAGE;
             }
         }
-        if (hrefCounter_Lalafo == 0 &&
+        if (hrefCounterLalafo == 0 &&
                 startPageSearch_Lalafo == null &&
                     productType.equalsIgnoreCase(ProductType.VIDEOCARD.name())) {
             startPageSearch_Lalafo = UrlHolder.LALAFO_START_GPU_URL;
@@ -55,8 +54,8 @@ public class SchedulerService extends TimerTask {
     @Override
     public void run() {
         initStartUrl();
-        if (hrefCounter_Tapaz == 0) {
-            startPageSearch_Tapaz = cachedUrl_TapAz;
+        if (hrefCounterTapaz == 0) {
+            startPageSearch_Tapaz = cachedUrlTapAz;
         }
         ExcelManager manager = new ExcelManagerImpl();
         manager.writeExcelWithBestOffers(CardEvaluateImpl.bestPrices, "");
