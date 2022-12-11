@@ -13,7 +13,7 @@ import java.util.Set;
 public class CardEvaluateImpl implements CardEvaluate {
     private static final Set<Product> allCards = new HashSet<>();
     private static HashMap<String, Integer> avgPriceForProduct;
-    private final Set<Product> bestPrices = new HashSet<>();
+    public static final Set<Product> bestPrices = new HashSet<>();
 
     @Override
     public Set<Product> evaluateBestOffers(List<Product> products) {
@@ -46,27 +46,40 @@ public class CardEvaluateImpl implements CardEvaluate {
 
     private static void initProcessors() {
         if (avgPriceForProduct == null) {
+            //intel
             avgPriceForProduct = new HashMap<>();
-            avgPriceForProduct.put("12100 ", 400);
-            avgPriceForProduct.put("12100f", 400);
-            avgPriceForProduct.put("11400", 371);
-            avgPriceForProduct.put("11600", 371);
-            avgPriceForProduct.put("11100 ", 350);
-            avgPriceForProduct.put("11100f", 350);
-            avgPriceForProduct.put("10100", 280);
-            avgPriceForProduct.put("10600", 350);
-            avgPriceForProduct.put("9400f", 230);
-            avgPriceForProduct.put("9400 ", 231);
-            avgPriceForProduct.put("9100 ", 251);
-
-            avgPriceForProduct.put("5700", 400);
-            avgPriceForProduct.put("5600", 400);
-            avgPriceForProduct.put("3700", 400);
-            avgPriceForProduct.put("3600", 290);
+            avgPriceForProduct.put("12400 ", 301);
+            avgPriceForProduct.put("12100 ", 275);
+            avgPriceForProduct.put("12100f", 271);
+            avgPriceForProduct.put("11600", 311);
+            avgPriceForProduct.put("11400", 311);
+            avgPriceForProduct.put("11100 ", 241);
+            avgPriceForProduct.put("11100f", 231);
+            avgPriceForProduct.put("10600", 351);
+            avgPriceForProduct.put("10400", 211);
+            avgPriceForProduct.put("10100", 201);
+            avgPriceForProduct.put("9400f", 200);
+            avgPriceForProduct.put("9400 ", 201);
+            avgPriceForProduct.put("9100 ", 161);
+            //amd ryzen
+            avgPriceForProduct.put("5700", 401);
+            avgPriceForProduct.put("5600", 271);
+            avgPriceForProduct.put("5500", 221);
             avgPriceForProduct.put("4100", 201);
-            avgPriceForProduct.put("3300", 250);
-            avgPriceForProduct.put("2700", 300);
-            avgPriceForProduct.put("2600", 250);
+            avgPriceForProduct.put("4100x", 221);
+            avgPriceForProduct.put("3700x", 311);
+            avgPriceForProduct.put("3700", 301);
+            avgPriceForProduct.put("3600 ", 211);
+            avgPriceForProduct.put("3600x", 221);
+            avgPriceForProduct.put("3500", 201);
+            avgPriceForProduct.put("3500x", 211);
+            avgPriceForProduct.put("3300", 181);
+            avgPriceForProduct.put("3300x", 191);
+            avgPriceForProduct.put("2700", 211);
+            avgPriceForProduct.put("2700x", 231);
+            avgPriceForProduct.put("2600", 171);
+            avgPriceForProduct.put("2600x", 175);
+            avgPriceForProduct.put("1700x", 175);
         }
     }
 
